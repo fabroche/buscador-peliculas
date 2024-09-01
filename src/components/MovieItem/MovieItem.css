@@ -1,0 +1,46 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.movie h3, .movie p {
+    margin: 0;
+    width: 100%;
+    min-width: 100px;
+    border-radius: 6px;
+}
+
+.movie img, .movie span{
+    border-radius: 8px;
+    margin-top: 16px;
+    aspect-ratio: 2/3;
+    min-height: 200px;
+    width: 100%;
+}
+
+.movie span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-alt);
+}
+
+.movie--loading {
+    background: var(--background-alt);
+    color: var(--background-alt);
+    animation: loading-skeleton infinite 1.5s ease;
+    transition: all 300ms;
+}
+
+@keyframes loading-skeleton {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
