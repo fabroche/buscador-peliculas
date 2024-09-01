@@ -1,4 +1,4 @@
-# Enunciado
+# Prueba Técnica para Junior React Frontend Developer
 
 Usé Water.css para los estilos minimalistas: https://cdn.jsdelivr.net/npm/water.css@2/out/water.css
 
@@ -25,4 +25,4 @@ Primera iteración:
 
 ✅ Haz que la búsqueda se haga automáticamente al escribir.
 
-- Evita que se haga la búsqueda continuamente al escribir (debounce)
+✅ Evita que se haga la búsqueda continuamente al escribir (debounce)
