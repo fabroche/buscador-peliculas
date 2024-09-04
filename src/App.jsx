@@ -11,11 +11,20 @@ import React, {useState} from "react";
 function App() {
 
     // States
-    const {search, setSearch, searchError, isFirstInput} = useSearch()
-    const [sort, setSort] = useState(false);
-    const {movies, getMovies, loading} = useMovies({search, sort})
+    const {
+        search,
+        setSearch,
+        searchError,
+        isFirstInput
+    } = useSearch()
 
-    //utils
+    const [sort, setSort] = useState(false);
+
+    const {
+        movies,
+        getMovies,
+        loading
+    } = useMovies({search, sort})
 
 
     return (
@@ -39,12 +48,16 @@ function App() {
                     onEmptyMovies={() => <NoSearchResults/>}
                     onLoading={() => Array.from(
                         {length: 9},
-                        () => <MovieItem key={Math.floor(Math.random() * 1000) + 1} movie={{}} loading={loading}/>
-                    )
-                    }
-                >
+                        () => <MovieItem
+                            key={Math.floor(Math.random() * 1000) + 1}
+                            movie={{}}
+                            loading={loading}/>
+                    )}>
                     {
-                        movie => <MovieItem key={movie.id} movie={movie} loading={loading}/>
+                        movie => <MovieItem
+                            key={movie.id}
+                            movie={movie}
+                            loading={loading}/>
                     }
                 </MovieList>
             </main>

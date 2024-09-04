@@ -5,3 +5,7 @@ form {
     padding-left: 6px;
     padding-right: 6px;
 }
+
+form input[name="search"] {
+    width: 100%;
+}
